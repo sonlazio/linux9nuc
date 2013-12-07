@@ -1,0 +1,96 @@
+if ARCH_W90X900
+
+config CPU_W90P910
+	bool
+	help
+	  Support for NUC910 of Nuvoton W90X900 CPUs.
+
+config CPU_NUC950
+	bool
+	help
+	  Support for NUC950 of Nuvoton NUC900 CPUs.
+config CPU_NUC951
+	bool
+	help
+	  Support for NUC951 of Nuvoton NUC900 CPUs.
+config CPU_NUC952
+	bool
+	help
+	  Support for NUC952 of Nuvoton NUC900 CPUs.
+config CPU_NUC945
+	bool
+	help
+	  Support for NUC945 of Nuvoton NUC900 CPUs.
+config CPU_NUC946
+	bool
+	help
+	  Support for NUC946 of Nuvoton NUC900 CPUs.
+
+config CPU_NUC960
+	bool
+	help
+	  Support for NUC960 of Nuvoton NUC900 CPUs.
+
+config CPU_NUC920
+	bool
+	help
+	  Support for NUC920 of Nuvoton NUC900 CPUs.
+
+choice
+
+	depends on ARCH_W90X900
+	prompt "NUC900 Machines"
+	default MACH_W90P910EVB
+	
+config MACH_W90P910EVB
+	bool "Nuvoton NUC910 Evaluation Board"
+	default y
+	select CPU_W90P910
+	help
+	   Say Y here if you are using the Nuvoton NUC910 EVB
+
+config MACH_W90P945EVB
+	bool "Nuvoton NUC945 Evaluation Board"
+	select CPU_NUC945
+	help
+	   Say Y here if you are using the Nuvoton NUC945 EVB
+
+config MACH_W90P946EVB
+	bool "Nuvoton NUC946 Evaluation Board"
+	select CPU_NUC946
+	help
+	   Say Y here if you are using the Nuvoton NUC946 EVB
+
+config MACH_W90P950EVB
+	bool "Nuvoton NUC950 Evaluation Board"
+	select CPU_NUC950
+	help
+	   Say Y here if you are using the Nuvoton NUC950 EVB
+
+config MACH_W90P951EVB
+	bool "Nuvoton NUC951 Evaluation Board"
+	select CPU_NUC951
+	help
+	   Say Y here if you are using the Nuvoton NUC951 EVB
+
+config MACH_W90P952EVB
+	bool "Nuvoton NUC952 Evaluation Board"
+	select CPU_NUC952
+	help
+	   Say Y here if you are using the Nuvoton NUC952 EVB
+
+config MACH_W90N960EVB
+	bool "Nuvoton NUC960 Evaluation Board"
+	select CPU_NUC960
+#	select PCI
+	help
+	   Say Y here if you are using the Nuvoton NUC960 EVB
+
+config MACH_W90P920EVB
+	bool "Nuvoton NUC920 Evaluation Board"
+	select CPU_NUC920
+#	select PCI
+	help
+	   Say Y here if you are using the Nuvoton NUC920 EVB
+endchoice
+endif
